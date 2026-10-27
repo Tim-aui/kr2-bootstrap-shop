@@ -28,3 +28,29 @@ body {
 footer h5 {
   color: #ffc107;
 }
+
+/* Карусель на главной */
+#mainCarousel .carousel-inner {
+  padding-bottom: 50px;
+}
+
+#mainCarousel .main-img {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+}
+
+/* Стрелки внизу, по бокам от точек */
+#mainCarousel .carousel-control-prev,
+#mainCarousel .carousel-control-next {
+  top: auto;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+}
+
+#mainCarousel .carousel-indicators {
+  margin-bottom: 0;
+  height: 40px;
+  align-items: center;
+}
