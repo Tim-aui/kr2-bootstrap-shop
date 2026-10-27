@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа - GPU Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">GPU Shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link active" href="order.html">Оформить заказ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4 mb-5">
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active">Оформление заказа</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-4">Оформление заказа</h1>
+
+    <div class="row">
+      <!-- Форма -->
+      <div class="col-lg-7 mb-4">
+        <form class="needs-validation" novalidate>
+          <h4>Контактные данные</h4>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name" class="form-label">Имя</label>
+              <input type="text" class="form-control" id="name" required>
+              <div class="invalid-feedback">Введите имя</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Телефон</label>
+              <input type="tel" class="form-control" id="phone" placeholder="+7 900 000-00-00" required>
+              <div class="invalid-feedback">Введите телефон</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+            <div class="invalid-feedback">Введите правильный email</div>
+          </div>
+
+          <h4 class="mt-4">Доставка</h4>
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="delivery" id="courier" checked>
+              <label class="form-check-label" for="courier">Курьер</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="delivery" id="pickup">
+              <label class="form-check-label" for="pickup">Самовывоз</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Адрес</label>
+            <input type="text" class="form-control" id="address" placeholder="Город, улица, дом, квартира">
+          </div>
+
+          <h4 class="mt-4">Оплата</h4>
+          <div class="mb-3">
+            <select class="form-select" id="payment" required>
+              <option value="">Выберите способ оплаты</option>
+              <option>Картой онлайн</option>
+              <option>По СБП</option>
+              <option>При получении</option>
+            </select>
+            <div class="invalid-feedback">Выберите способ оплаты</div>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="agree" required>
+            <label class="form-check-label" for="agree">Согласен на обработку персональных данных</label>
+            <div class="invalid-feedback">Нужно согласие</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg">Отправить заказ</button>
+        </form>
+      </div>
+
+      <!-- Товары в заказе -->
+      <div class="col-lg-5">
+        <div class="card">
+          <div class="card-header">Ваш заказ</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between">
+              <span>GIGABYTE GeForce RTX 5070 x1</span>
+              <span>68 990 ₽</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>PowerColor Radeon RX 9060 XT x1</span>
+              <span>44 990 ₽</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Доставка</span>
+              <span>Бесплатно</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between fw-bold">
+              <span>Итого</span>
+              <span>113 980 ₽</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-4" id="contacts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>GPU Shop</h5>
+          <p>Учебный интернет-магазин видеокарт.</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Контакты</h5>
+          <p>Телефон: +7 (495) 123-45-67<br>Email: info@gpushop.ru<br>Москва, ул. Примерная, 1</p>
+        </div>
+      </div>
+      <p class="text-center mb-0">© 2026 GPU Shop</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
